@@ -6,11 +6,12 @@ jobs:
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v3
+      
       - name: Configurar entorno
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt
+      
       - name: Ejecutar pruebas
         run: |
           python -m unittest test_cafetera.py
